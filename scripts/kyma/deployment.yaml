@@ -68,6 +68,13 @@ spec:
         - image: darklynx/request-baskets
           name: request-baskets
           imagePullPolicy: "Always"
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
           ports:
             - containerPort: 55555
               name: http
